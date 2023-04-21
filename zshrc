@@ -22,7 +22,6 @@ export NVM_DIR=~/.nvm
 alias c='clear'
 alias pull='git pull'
 alias dev='git checkout develop'
-alias lds='~/dev/scripts/localDevSetup.sh'
 alias console='cd ~/dev/vantage/console'
 alias reload='source ~/.zshrc'
 alias movmp4='~/dev/scripts/movmp4.sh'
@@ -31,12 +30,10 @@ alias janus='cd ~/dev/janus'
 if [ -f ~/.git-completion.zsh ]; then
   . ~/.git-completion.zsh
 fi
-eval "$(pyenv init -)"
 
-export START="/Users/aj250062/dev/"
-if [[ $PWD == $HOME ]]; then
-    cd $START
-fi
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 export LDFLAGS="-L/usr/local/opt/zlib/lib"
 export CPPFLAGS="-I/usr/local/opt/zlib/include"
