@@ -25,7 +25,7 @@ alias dev='git checkout develop'
 alias console='cd ~/dev/vantage/console'
 alias reload='source ~/.zshrc'
 alias movmp4='~/dev/scripts/movmp4.sh'
-alias janus='cd ~/dev/janus'
+alias concatVids='~/dev/scripts/concatVids.sh'
 
 if [ -f ~/.git-completion.zsh ]; then
   . ~/.git-completion.zsh
